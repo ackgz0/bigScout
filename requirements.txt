@@ -1,0 +1,11 @@
+kafka-python
+pymongo
+pandas
+numpy
+tensorflow
+scikit-learn
+flask
+requests
+beautifulsoup4
+selenium
+pyspark
