@@ -96,7 +96,7 @@ python app.py
 ```
 
 ** 9. Access the Application **
-# Open your browser and go to:
+Open your browser and go to:
 ```bash
 http://localhost:5000
 ```
