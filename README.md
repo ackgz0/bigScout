@@ -53,46 +53,60 @@ Bülent Batıkan Sarıkaya
 
 ### 🔧 Step-by-step Setup
 
+
+** 1. Clone the Repository **
 ```bash
-# 1. Clone the Repository
 git clone https://github.com/your-username/bigscout.git
 cd bigscout
+```
 
-# 2. Start Kafka, Zookeeper, and MongoDB using Docker
+** 2. Start Kafka, Zookeeper, and MongoDB using Docker **
+```bash
 docker-compose up -d
+```
 
-# 3. Install Python Dependencies
+** 3. Install Python Dependencies **
+```bash
 pip install -r requirements.txt
+```
 
-# 4. Run the FBref Data Scraper (Kafka Producer)
-python producer/fbref_scraper.py
+** 4. Run the FBref Data Scraper (Kafka Producer) **
+```bash
+python data_pipeline/kafka_producer.py
+```
 
-# 5. Start Kafka Consumer to Store Data into MongoDB
-python consumer/mongo_consumer.py
+** 5. Start Kafka Consumer to Store Data into MongoDB **
+```bash
+python data_pipeline/kafka_consumer.py
+```
 
-# 6. Start Apache Spark ETL Job to Clean the Data
-spark-submit etl/spark_etl.py
+** 6. Start Apache Spark ETL Job to Clean the Data **
+```bash
+spark-submit data_pipeline/etl-cleaner.py
+```
 
-# 7. Generate Embeddings Using OpenAI API
-python embedding/generate_embeddings.py
+** 7. Generate Embeddings Using OpenAI API **
+```bash
+python embedding/embed_players_gpt_batch.py
+```
 
-# 8. Launch the Flask Web Application
+** 8. Launch the Flask Web Application **
+```bash
 python app.py
+```
 
-# 9. Access the Application
+** 9. Access the Application **
 # Open your browser and go to:
+```bash
 http://localhost:5000
 ```
 
-
-
-
-📦 Data Sources & APIs
+### 📦 Data Sources & APIs
 FBref.com
 Source of raw player statistics and seasonal performance data.
 
-OpenAI API
+### OpenAI API
 Used for embedding player data and generating scout-style reasoning.
 
-📋 License
+### 📋 License
 This project is licensed under the MIT License. See the LICENSE file for details.
