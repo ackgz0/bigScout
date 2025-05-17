@@ -108,4 +108,5 @@ Source of raw player statistics and seasonal performance data.
 Used for embedding player data and generating scout-style reasoning.
 
 ### 📋 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
