@@ -53,11 +53,37 @@ Bülent Batıkan Sarıkaya
 
 ### 🔧 Step-by-step Setup
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/your-username/bigscout.git
-   cd bigscout
-Start Kafka, Zookeeper, MongoDB via Docker
+```bash
+# 1. Clone the Repository
+git clone https://github.com/your-username/bigscout.git
+cd bigscout
+
+# 2. Start Kafka, Zookeeper, and MongoDB using Docker
+docker-compose up -d
+
+# 3. Install Python Dependencies
+pip install -r requirements.txt
+
+# 4. Run the FBref Data Scraper (Kafka Producer)
+python producer/fbref_scraper.py
+
+# 5. Start Kafka Consumer to Store Data into MongoDB
+python consumer/mongo_consumer.py
+
+# 6. Start Apache Spark ETL Job to Clean the Data
+spark-submit etl/spark_etl.py
+
+# 7. Generate Embeddings Using OpenAI API
+python embedding/generate_embeddings.py
+
+# 8. Launch the Flask Web Application
+python app.py
+
+# 9. Access the Application
+# Open your browser and go to:
+http://localhost:5000
+```
+
 
 
 
