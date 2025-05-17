@@ -5,7 +5,7 @@ BigScout is an AI-powered football scouting system that leverages big data techn
 ---
 
 ## 🧑‍💻 Team Members
-- **Member:**   [Eray Acıkgoz](https://github.com/ackgz0))  
+- **Member:**   [Eray Acıkgoz](https://github.com/ackgz0)
 - **Member:**   [Ulas Ucrak](https://github.com/ulasucrak)  
 - **Member:**   [Bulent Batikan Sarikaya](https://github.com/Bloheujkleh)
 
