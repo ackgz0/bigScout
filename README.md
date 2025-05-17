@@ -4,18 +4,18 @@ BigScout is an AI-powered football scouting system that leverages big data techn
 
 ---
 
-## 🧑‍💻 Authors
-Umut Eray Açıkgöz
-Ulaş Uçrak
-Bülent Batıkan Sarıkaya  
+## 🧑‍💻 Team Members
+- **Member:**   [Eray Acıkgoz](https://github.com/ackgz0))  
+- **Member:**   [Ulas Ucrak](https://github.com/ulasucrak)  
+- **Member:**   [Bulent Batikan Sarikaya](https://github.com/Bloheujkleh)
 
 ---
 
 ## 📸 Demo Screenshots
 
 ### User Interface
-![UI Screenshot 1](./flaskUI-2.png)
-![UI Screenshot 2](./Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-05-17%20181018.png)
+![UI Screenshot 1](./flaskUI-1.png)
+![UI Screenshot 2](./flaskUI-2.png)
 
 ---
 
@@ -95,8 +95,7 @@ python embedding/embed_players_gpt_batch.py
 python app.py
 ```
 
-9. Access the Application 
-Open your browser and go to:
+9. Open your browser and go to:
 ```bash
 http://localhost:5000
 ```
