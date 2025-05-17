@@ -54,7 +54,7 @@ Bülent Batıkan Sarıkaya
 ### 🔧 Step-by-step Setup
 
 
-** 1. Clone the Repository **
+* 1. Clone the Repository *
 ```bash
 git clone https://github.com/your-username/bigscout.git
 cd bigscout
