@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Premier League Clone</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- 🔼 En Üst Bar -->
+  <div class="top-club-bar">
+    <span>Club sites <sup>🔗</sup></span>
+    <div class="club-logos">
+      <!-- Kulüp logoları (kısaltıldı) -->
+      <a href="https://www.arsenal.com" target="_blank">
+    <img src="https://resources.premierleague.com/premierleague/badges/t3.svg" alt="Arsenal">
+  </a>
+  <a href="https://www.avfc.co.uk" target="_blank">
+    <img src="https://resources.premierleague.com/premierleague/badges/t7.svg" alt="Aston Villa">
+  </a>
+  <a href="https://www.afcb.co.uk" target="_blank">
+    <img src="https://resources.premierleague.com/premierleague/badges/t91.svg" alt="Bournemouth">
+  </a>
+
+    <a href="https://www.burnleyfootballclub.com/" target="_blank">
+    <img src="https://resources.premierleague.com/premierleague/badges/t90.svg" alt="Burnley">
+  </a>
+
+   <a href="https://www.brightonandhovealbion.com" target="_blank">
+    <img src="https://resources.premierleague.com/premierleague/badges/t36.svg " alt="Brighton">
+  </a>
+
+
+
+  </a>
+  <a href="https://www.chelseafc.com/en" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t8.svg" alt="Chelsea">
+  </a>
+  
+  </a>
+  <a href="https://www.cpfc.co.uk/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t31.svg" alt="Crystal Palace">
+  </a>
+
+  <a href="https://www.evertonfc.com/home" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t11.svg" alt="Everton">
+  </a>
+
+    <a href="https://www.fulhamfc.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t54.svg" alt="Fulham">
+  </a>
+
+      <a href="https://www.whufc.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t21.svg" alt="West Ham">
+  </a>
+
+    <a href="https://www.lcfc.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t13.svg" alt="Leicester City">
+  </a>
+
+    <a href="https://www.mancity.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t43.svg" alt="Manchester City">
+  </a>
+
+    <a href="https://www.liverpoolfc.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t14.svg" alt="Liverpool">
+  </a>
+
+    <a href="https://www.manutd.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t1.svg" alt="Manchester United">
+  </a>
+    <a href="https://www.newcastleunited.com/en" target="_blank">
+  <img src="https://resources.premierleague.com/premierleague/badges/t4.svg" alt="Newcastle United">
+</a>
+    <a href="https://www.nottinghamforest.co.uk/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t17.svg" alt="Nottingam Forest">
+  </a>
+
+    <a href="https://www.southamptonfc.com/en" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t20.svg" alt="SouthHampton">
+  </a>
+    <a href="https://www.tottenhamhotspur.com/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t6.svg" alt="Tottenhan Hotspur">
+  </a>
+    <a href="https://www.wba.co.uk/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t35.svg" alt="WBA">
+  </a>
+    <a href="https://www.wolves.co.uk/" target="_blank">
+   <img src="https://resources.premierleague.com/premierleague/badges/t39.svg" alt="Wolves">
+  </a>
+      <!-- ...diğer logolar... -->
+    </div>
+  </div>
+
+  <div class="main-navbar">
+  <div class="left-wrapper">
+    <div class="logo-wrapper">
+      <img class="pl-logo" src="/static/image.png" alt="Premier League Logo">
+    </div>
+    <ul>
+      <li>Welcome to BigScout</li>
+    </ul>
+  </div>
+
+  <div class="search-box">
+    <form method="POST">
+      <input type="text" name="prompt" placeholder="Search for a player..." value="{{ prompt }}">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+
+  <!-- 🔽 Gri Alt Navbar -->
+  <div class="sub-navbar">
+  </div>
+
+  <!-- 🔍 Arama Sonuçları -->
+  <!-- 🔍 Arama Sonuçları -->
+<div class="search-results">
+  {% if results %}
+    <h2 class="section-title">Top Matching Players</h2>
+    <div class="player-cards">
+      {% for player in results %}
+        <div class="player-card">
+          <h3>{{ player.name }}</h3>
+          <p class="player-meta">
+            {{ player.season }} – {{ player.team }} | {{ player.league }}
+          </p>
+          <p><strong>Position:</strong> {{ player.position }} | <strong>Age:</strong> {{ player.age }}</p>
+          <div class="stats">
+            <span><strong>xA:</strong> {{ player.xA }}</span>
+            <span><strong>KP:</strong> {{ player.KP }}</span>
+            <span><strong>Ast:</strong> {{ player.Ast }}</span>
+            <span><strong>PrgP:</strong> {{ player.PrgP }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="section-title"> Why These Players?</h3>
+    <div class="explanation-box">{{ explanation | safe }}</div>
+
+{% if comment %}
+  <h3 class="section-title">General Comment</h3>
+  <div class="gpt-comment-box">
+    {% for line in comment.split('\n') %}
+      <p>{{ line }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+  {% elif prompt %}
+    <p><em>No matching players found.</em></p>
+  {% endif %}
+</div>
+
+</body>
+</html>
