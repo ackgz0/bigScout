@@ -35,15 +35,15 @@ def search_players(query: str, top_k: int = 5):
         results.append({
             "name":     _players[i],
             "season":   info.get("season"),
-            "team":     info.get("Squad"),    # template’de player.team kullanılıyor
+            "team":     info.get("Squad"),    
             "league":   info.get("league"),
-            "position": info.get("Pos"),      # template’de player.position
+            "position": info.get("Pos"),      
             "age":      info.get("Age"),
             "xA":       info.get("xA"),
             "KP":       info.get("KP"),
             "Ast":      info.get("Ast"),
             "PrgP":     info.get("PrgP"),
-            "profile":  _profiles[i]          # açıklama üretiminde kullanacağız
+            "profile":  _profiles[i]          
         })
     return results
 
